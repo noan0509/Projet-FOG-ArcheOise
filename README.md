@@ -1,3 +1,4 @@
+!(N'oublie pas le point d'exclamation au début et les parenthèses, c'est ce qui dit à GitHub : "Ceci est une photo".)
 # [cite_start]Projet BTS CIEL 2026 : Déploiement FOG Project [cite: 1, 3]
 
 ## [cite_start]Contexte du projet [cite: 15]
