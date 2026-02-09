@@ -1,28 +1,31 @@
-!(N'oublie pas le point d'exclamation au début et les parenthèses, c'est ce qui dit à GitHub : "Ceci est une photo".)
-# [cite_start]Projet BTS CIEL 2026 : Déploiement FOG Project [cite: 1, 3]
+# 🚀 Projet de Masterisation - L'ARCHE OISE
+### BTS CIEL 2026 - Revue n°1 (17 Février)
 
-## [cite_start]Contexte du projet [cite: 15]
-[cite_start]L'entreprise **L'ARCHE OISE** prévoit le renouvellement de nombreux PC fixes en 2026[cite: 4, 16]. 
-[cite_start]Actuellement, l'installation manuelle prend trop de temps (1h30/poste) et génère des erreurs[cite: 17, 18, 20].
+![Interface de pilotage](Interface.png)
 
-## [cite_start]Solution proposée [cite: 23]
+## 📋 Contexte du projet
+L'entreprise **L'ARCHE OISE** prévoit le renouvellement de nombreux PC fixes et portables en 2026. Actuellement, l'installation manuelle prend trop de temps (1h30/poste) et génère des erreurs.
+
+## 🛠️ Solution proposée
 Déploiement d'une infrastructure **FOG Project** pour :
-* [cite_start]La capture d'images système[cite: 24].
-* [cite_start]Le déploiement automatisé via **PXE**[cite: 25].
-* [cite_start]Le développement d'une **interface web simplifiée** (API FOG).
+* La capture d'images système.
+* Le déploiement automatisé via **PXE**.
+* Le développement d'une **interface web simplifiée** pour les techniciens.
 
-## [cite_start]Contraintes Techniques [cite: 35, 36]
-* **Réseau** : Boot PXE (DHCP + TFTP) sans perturbation.
-* **Sécurité** : Interface en HTTPS et OS durci.
-* **Interopérabilité** : Intégration avec l'Active Directory existant.
+## ⚙️ Automatisation (Scripts PowerShell)
+Nous avons développé deux scripts de post-installation pour répondre aux besoins spécifiques du parc :
+1. **PC Fixe (`post-install-fixe.ps1`)** : 
+   - Configuration IP Statique (pour la prise en main via **UltraVNC**).
+   - Installation : Chrome, LibreOffice, UltraVNC, ESET.
+2. **PC Portable (`post-install-portable.ps1`)** : 
+   - Configuration DHCP (pour la mobilité/Wi-Fi).
+   - Installation : Chrome, LibreOffice, ESET.
 
-## État d'avancement (Février 2026)
-- [x] [cite_start]Analyse des besoins.
-- [x] Conception de l'interface web (HTML/CSS).
-- [x] Rédaction du script de post-déploiement (PowerShell).
+## ✅ État d'avancement (Février 2026)
+- [x] Analyse des besoins et contexte L'ARCHE OISE.
+- [x] Maquette de l'interface de pilotage validée (HTML/CSS).
+- [x] Scripts de post-déploiement rédigés et testés.
 - [ ] Installation de la VM Serveur FOG (Prochaine étape).
 
-### État d'avancement - 9 Février 2026
-- [x] Structure du projet créée.
-- [x] Maquette de l'interface de pilotage validée (HTML/CSS).
-- [x] Script de post-déploiement PowerShell rédigé.
+---
+*Développé par Noan Moerkerke - Projet BTS CIEL IR*
