@@ -1,31 +1,27 @@
 # 🚀 Projet de Masterisation - L'ARCHE OISE
-### BTS CIEL 2026 - Revue n°1 
+### BTS CIEL 2026 - Revue n°1
 
 ![Interface de pilotage](Interface.png)
 
-## 📋 Contexte du projet
-L'entreprise **L'ARCHE OISE** prévoit le renouvellement de nombreux PC fixes et portables en 2026. Actuellement, l'installation manuelle prend trop de temps (1h30/poste) et génère des erreurs.
+## 📋 Problématique & Objectif
+Réduire le temps de préparation des postes de **1h30 à 15 minutes**. L'automatisation garantit un parc homogène et diminue les erreurs de configuration manuelle.
 
-## 🛠️ Solution proposée
-Déploiement d'une infrastructure **FOG Project** pour :
-* La capture d'images système.
-* Le déploiement automatisé via **PXE**.
-* Le développement d'une **interface web simplifiée** pour les techniciens.
+## ⚙️ Intelligence des Scripts (PowerShell)
+Contrairement à une installation figée, mes scripts offrent une **flexibilité totale** au technicien lors du déploiement :
 
-## ⚙️ Automatisation (Scripts PowerShell)
-Nous avons développé deux scripts de post-installation pour répondre aux besoins spécifiques du parc :
-1. **PC Fixe (`post-install-fixe.ps1`)** : 
-   - Configuration IP Statique (pour la prise en main via **UltraVNC**).
-   - Installation : Chrome, LibreOffice, UltraVNC, ESET.
-2. **PC Portable (`post-install-portable.ps1`)** : 
-   - Configuration DHCP (pour la mobilité/Wi-Fi).
-   - Installation : Chrome, LibreOffice, ESET.
+* **Nommage Dynamique** : Le script demande la saisie du nom (ex: FIXE-01 ou PORT-NOM), permettant une gestion d'inventaire précise dès l'installation.
+* **Modularité Réseau** : Une interface interactive permet de choisir entre :
+    1. **DHCP** : Configuration automatique (idéal pour les PC Portables/Wi-Fi).
+    2. **IP Statique** : Configuration manuelle avec DNS pré-paramétrés (idéal pour les Fixes et la prise en main via **UltraVNC**).
 
-## ✅ État d'avancement (Février 2026)
-- [x] Analyse des besoins et contexte L'ARCHE OISE.
-- [x] Maquette de l'interface de pilotage validée (HTML/CSS).
-- [x] Scripts de post-déploiement rédigés et testés.
-- [ ] Installation de la VM Serveur FOG (Prochaine étape).
+### 🖥️ Spécificités des postes
+- **PC FIXE** : Installation de Chrome, LibreOffice, ESET et **UltraVNC** (Maintenance).
+- **PC PORTABLE** : Installation de Chrome, LibreOffice, ESET et **OpenVPN** (Télétravail sécurisé).
+
+## 💻 Stack Technique & Compétences
+* **Logiciels de déploiement** : FOG Project (PXE/iPXE).
+* **Scripting** : PowerShell (Gestion des interfaces réseau et renommage système).
+* **Versioning** : Git / GitHub pour le suivi du code.
 
 ---
 *Développé par Noan Moerkerke - Projet BTS CIEL IR*
