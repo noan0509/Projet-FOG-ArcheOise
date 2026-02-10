@@ -1,5 +1,5 @@
 # 🚀 Projet de Masterisation - L'ARCHE OISE
-### BTS CIEL 2026 - Revue n°1 (17 Février)
+### BTS CIEL 2026 - Revue n°1 
 
 ![Interface de pilotage](Interface.png)
 
